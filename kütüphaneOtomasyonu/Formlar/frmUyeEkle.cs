@@ -20,20 +20,14 @@ namespace kütüphaneOtomasyonu.Formlar
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox1.ImageLocation = openFileDialog1.FileName;
-            }
-        }
+     
         frmUyeListele frmlistele = new frmUyeListele();
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             try
             {
                 MySqlConnection connect = new MySqlConnection("Server='localhost';Database='kutuphane';Uid='root';Pwd='233789975668mM_'");
-                MySqlCommand komut = new MySqlCommand($"insert into Uyeler(UyeID,AdiSoyadi,Telefon,Adres,email,Resim,OkunanKitapSayisi,KayitTarihi) values('{txtUyeID.Text}','{txtAdiSoyadi.Text}','{txtTelefon.Text}','{txtAdres.Text}','{txtEmail.Text}','{pictureBox1.ImageLocation}','{txtOkunanKitapSayisi.Text}',now());", connect);
+                MySqlCommand komut = new MySqlCommand($"insert into uyeler(UyeID,AdiSoyadi,Telefon,Adres,email,KayitTarihi) values('{txtUyeID.Text}','{txtAdiSoyadi.Text}','{txtTelefon.Text}','{txtAdres.Text}','{txtEmail.Text}',now());", connect);
                 connect.Open();
                 MySqlDataReader veri = komut.ExecuteReader();
                 veri.Read();

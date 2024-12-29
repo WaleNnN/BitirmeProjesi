@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,34 @@ namespace kütüphaneOtomasyonu.Formlar
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void iadeKitaplar_Load(object sender, EventArgs e)
+        {
+            MySqlConnection connect = new MySqlConnection("Server='localhost';Database='kutuphane';Uid='root';Pwd='233789975668mM_'");
+            string komut2 = "select * from EmanetKitaplar";
+            connect.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter(komut2, connect);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            connect.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MySqlConnection connect = new MySqlConnection("Server='localhost';Database='kutuphane';Uid='root';Pwd='233789975668mM_'");
+            connect.Open();
+            MySqlCommand komut = new MySqlCommand($"delete from EmanetKitaplar where KitapID={textBox3.Text} or UyeID={textBox1.Text}", connect);
+            komut.ExecuteNonQuery();
+            connect.Close();
+            string komut2 = "select * from EmanetKitaplar";
+            connect.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter(komut2, connect);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            connect.Close();
         }
     }
 }
