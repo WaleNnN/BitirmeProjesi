@@ -63,7 +63,7 @@
             // 
             // txtAciklama
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(446, 103);
+            this.txtAciklama.Location = new System.Drawing.Point(452, 92);
             this.txtAciklama.Multiline = true;
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Size = new System.Drawing.Size(155, 49);
@@ -79,7 +79,7 @@
             // 
             // txtSayfasayisi
             // 
-            this.txtSayfasayisi.Location = new System.Drawing.Point(446, 65);
+            this.txtSayfasayisi.Location = new System.Drawing.Point(452, 50);
             this.txtSayfasayisi.Multiline = true;
             this.txtSayfasayisi.Name = "txtSayfasayisi";
             this.txtSayfasayisi.Size = new System.Drawing.Size(155, 24);
@@ -87,7 +87,7 @@
             // 
             // txtYayinevi
             // 
-            this.txtYayinevi.Location = new System.Drawing.Point(446, 30);
+            this.txtYayinevi.Location = new System.Drawing.Point(452, 20);
             this.txtYayinevi.Multiline = true;
             this.txtYayinevi.Name = "txtYayinevi";
             this.txtYayinevi.Size = new System.Drawing.Size(155, 24);
@@ -95,7 +95,7 @@
             // 
             // txtYazar
             // 
-            this.txtYazar.Location = new System.Drawing.Point(128, 85);
+            this.txtYazar.Location = new System.Drawing.Point(129, 92);
             this.txtYazar.Multiline = true;
             this.txtYazar.Name = "txtYazar";
             this.txtYazar.Size = new System.Drawing.Size(155, 24);
@@ -110,11 +110,10 @@
             this.label5.Size = new System.Drawing.Size(84, 24);
             this.label5.TabIndex = 13;
             this.label5.Text = "Kitap Adı";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtKitapAdi
             // 
-            this.txtKitapAdi.Location = new System.Drawing.Point(129, 55);
+            this.txtKitapAdi.Location = new System.Drawing.Point(129, 60);
             this.txtKitapAdi.Multiline = true;
             this.txtKitapAdi.Name = "txtKitapAdi";
             this.txtKitapAdi.Size = new System.Drawing.Size(155, 24);
@@ -124,7 +123,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(336, 30);
+            this.label7.Location = new System.Drawing.Point(334, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 24);
             this.label7.TabIndex = 14;
@@ -144,7 +143,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(308, 60);
+            this.label8.Location = new System.Drawing.Point(306, 45);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 24);
             this.label8.TabIndex = 7;
@@ -154,7 +153,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(330, 103);
+            this.label10.Location = new System.Drawing.Point(328, 88);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(86, 24);
             this.label10.TabIndex = 4;

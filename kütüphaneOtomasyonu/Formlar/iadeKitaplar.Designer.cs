@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtUyeIDara = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -49,7 +49,7 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 66);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 54);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(740, 187);
             this.dataGridView1.TabIndex = 0;
@@ -121,18 +121,19 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Üye ID Ara:";
             // 
-            // textBox4
+            // txtUyeIDara
             // 
-            this.textBox4.Location = new System.Drawing.Point(597, 14);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(126, 24);
-            this.textBox4.TabIndex = 3;
+            this.txtUyeIDara.Location = new System.Drawing.Point(597, 14);
+            this.txtUyeIDara.Multiline = true;
+            this.txtUyeIDara.Name = "txtUyeIDara";
+            this.txtUyeIDara.Size = new System.Drawing.Size(126, 24);
+            this.txtUyeIDara.TabIndex = 3;
+            this.txtUyeIDara.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSalmon;
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtUyeIDara);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label1);
@@ -183,7 +184,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtUyeIDara;
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;

@@ -19,10 +19,7 @@ namespace kütüphaneOtomasyonu.Formlar
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void kitapListele_Load(object sender, EventArgs e)
         {
@@ -41,34 +38,10 @@ namespace kütüphaneOtomasyonu.Formlar
         {
             MySqlConnection connect = new MySqlConnection("Server='localhost';Database='kutuphane';Uid='root';Pwd='233789975668mM_'");
             connect.Open();
-            string seto = " ";
-            string komut = "update kitaplar set ";
-            if (txtKitapAdi.Text != "")
-            {
-                seto += "KitapAdi='" + txtKitapAdi.Text + "' ";
-            }
-            if (txtYazar.Text != "")
-            {
-                seto += "Yazari='" + txtYazar.Text + "' ";
-            }
-            if (txtYayinevi.Text != "")
-            {
-
-                seto += "Yayınevi='" + txtYayinevi.Text + "' ";
-            }
-            if (txtSayfasayisi.Text != "")
-            {
-                seto += "SayfaSayisi='" + txtSayfasayisi.Text + "' ";
-            }
-            if (txtAciklama.Text != "")
-            {
-                seto += "Aciklama='" + txtAciklama.Text + "' ";
-            }
-            komut += seto + "where KitapID= "+txtKitapID.Text;
-            MySqlCommand komut1 = new MySqlCommand(komut, connect);
-            komut1.ExecuteNonQuery();
-
+            MySqlCommand komut = new MySqlCommand("Update kitaplar set KitapAdi='"+txtKitapAdi.Text+"',Yazari='"+txtYazar.Text+"',Yayınevi='"+txtYayinevi.Text+"',Sayfasayisi='"+txtSayfasayisi.Text+"',Aciklama='"+txtAciklama.Text+"' Where KitapID='"+txtKitapID.Text+"'",connect);
+            komut.ExecuteNonQuery();
             connect.Close();
+            MessageBox.Show("Güncelleme Başarılı");
             string komut2 = "select * from kitaplar";
             connect.Open();
             MySqlDataAdapter da = new MySqlDataAdapter(komut2, connect);
@@ -93,5 +66,6 @@ namespace kütüphaneOtomasyonu.Formlar
             dataGridView1.DataSource = dt;
             connect.Close();
         }
+
     }
 }

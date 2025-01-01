@@ -54,30 +54,10 @@ namespace kütüphaneOtomasyonu.Formlar
         {
             MySqlConnection connect = new MySqlConnection("Server='localhost';Database='kutuphane';Uid='root';Pwd='233789975668mM_'");
             connect.Open();
-            string seto = " ";
-            string komut = "update uyeler set ";
-            if (txtAdiSoyadi.Text != "")
-            {
-                seto += "AdiSoyadi='"+ txtAdiSoyadi.Text+"' ";
-            }
-            if (txtTelefon.Text != "")
-            {
-                seto += "Telefon='" + txtTelefon.Text + "' ";
-            }
-            if (txtAdres.Text != "")
-            {
-
-                seto += "Adres='" + txtAdres.Text + "' ";
-            }
-            if (txtEmail.Text != "")
-            {
-                seto += "email='" + txtEmail.Text + "' ";
-            }
-            komut += seto +"where UyeId= "+txtUyeID.Text;
-            MySqlCommand komut1=new MySqlCommand(komut,connect);
-            komut1.ExecuteNonQuery();
-
+            MySqlCommand komut = new MySqlCommand("Update Uyeler set AdiSoyadi='" + txtAdiSoyadi.Text + "',Telefon='" + txtTelefon.Text + "',Adres='" + txtAdres.Text + "',email='" + txtEmail.Text + "' where UyeID='"+txtUyeID.Text+"'", connect);
+            komut.ExecuteNonQuery();
             connect.Close();
+            MessageBox.Show("Güncelleme Başarılı");
             string komut2 = "select * from Uyeler";
             connect.Open();
             MySqlDataAdapter da = new MySqlDataAdapter(komut2, connect);
@@ -106,6 +86,15 @@ namespace kütüphaneOtomasyonu.Formlar
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtAdSoyadAra_TextChanged(object sender, EventArgs e)
+        {
+            MySqlConnection connect = new MySqlConnection("Server='localhost';Database='kutuphane';Uid='root';Pwd='233789975668mM_'");
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new  MySqlDataAdapter("Select * from Uyeler where AdiSoyadi like '%"+txtAdSoyadAra.Text+"%'" ,connect);       
+            da.Fill(dt);
+            dataGridView1.DataSource= dt;
         }
     }
 }

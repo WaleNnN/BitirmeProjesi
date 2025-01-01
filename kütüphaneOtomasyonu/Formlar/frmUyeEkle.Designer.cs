@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtAdiSoyadi = new System.Windows.Forms.TextBox();
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.txtAdres = new System.Windows.Forms.TextBox();
@@ -42,12 +41,10 @@
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnCikis = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.txtUyeID = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,16 +88,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "E-Mail";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(125, 259);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 24);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Tarih";
-            // 
             // txtAdiSoyadi
             // 
             this.txtAdiSoyadi.Location = new System.Drawing.Point(196, 53);
@@ -143,9 +130,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSalmon;
-            this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.btnCikis);
             this.panel1.Controls.Add(this.btnKaydet);
             this.panel1.Controls.Add(this.label1);
@@ -154,7 +139,6 @@
             this.panel1.Controls.Add(this.txtUyeID);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(-3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(804, 451);
@@ -170,21 +154,12 @@
             this.label7.TabIndex = 5;
             this.label7.Text = "Üye ID";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(196, 261);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(126, 20);
-            this.dateTimePicker1.TabIndex = 4;
-            // 
             // btnCikis
             // 
             this.btnCikis.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCikis.ImageKey = "5452459_arrow_direction_door_emergency_exit_icon.png";
             this.btnCikis.ImageList = this.ımageList1;
-            this.btnCikis.Location = new System.Drawing.Point(319, 303);
+            this.btnCikis.Location = new System.Drawing.Point(331, 334);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(77, 64);
             this.btnCikis.TabIndex = 3;
@@ -198,7 +173,7 @@
             this.btnKaydet.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnKaydet.ImageKey = "79524_as_guardar_save_stock_icon.png";
             this.btnKaydet.ImageList = this.ımageList1;
-            this.btnKaydet.Location = new System.Drawing.Point(240, 303);
+            this.btnKaydet.Location = new System.Drawing.Point(240, 334);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(73, 64);
             this.btnKaydet.TabIndex = 3;
@@ -218,13 +193,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(248, 311);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 6;
             // 
             // frmUyeEkle
             // 
@@ -251,7 +219,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtAdiSoyadi;
         private System.Windows.Forms.TextBox txtTelefon;
         private System.Windows.Forms.TextBox txtAdres;
@@ -261,9 +228,7 @@
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtUyeID;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

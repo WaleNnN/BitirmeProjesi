@@ -50,5 +50,14 @@ namespace kütüphaneOtomasyonu.Formlar
             dataGridView1.DataSource = dt;
             connect.Close();
         }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            MySqlConnection connect = new MySqlConnection("Server='localhost';Database='kutuphane';Uid='root';Pwd='233789975668mM_'");
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter("Select * from emanetkitaplar where UyeID like '%" + txtUyeIDara.Text + "%'", connect);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
     }
 }

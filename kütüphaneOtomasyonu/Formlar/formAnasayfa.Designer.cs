@@ -176,7 +176,7 @@
             this.btnEmanetKitaplar.Name = "btnEmanetKitaplar";
             this.btnEmanetKitaplar.Size = new System.Drawing.Size(166, 57);
             this.btnEmanetKitaplar.TabIndex = 0;
-            this.btnEmanetKitaplar.Text = "Emanet Kitaplar";
+            this.btnEmanetKitaplar.Text = "Ödünç Kitaplar";
             this.btnEmanetKitaplar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEmanetKitaplar.UseVisualStyleBackColor = true;
             this.btnEmanetKitaplar.Click += new System.EventHandler(this.btnEmanetKitaplar_Click);
@@ -233,9 +233,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 453);
+            this.BackColor = System.Drawing.Color.Chocolate;
+            this.ClientSize = new System.Drawing.Size(619, 448);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formAnasayfa";
             this.Text = "formAnasayfa";
             this.panel1.ResumeLayout(false);

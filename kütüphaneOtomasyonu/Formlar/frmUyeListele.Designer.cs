@@ -249,6 +249,7 @@
             this.txtAdSoyadAra.Name = "txtAdSoyadAra";
             this.txtAdSoyadAra.Size = new System.Drawing.Size(200, 24);
             this.txtAdSoyadAra.TabIndex = 16;
+            this.txtAdSoyadAra.TextChanged += new System.EventHandler(this.txtAdSoyadAra_TextChanged);
             // 
             // label8
             // 
