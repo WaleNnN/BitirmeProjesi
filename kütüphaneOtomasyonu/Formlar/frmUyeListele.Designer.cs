@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUyeListele));
-            this.uyelerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kutuphaneDataSetDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kutuphane_DataSetDataSet = new kütüphaneOtomasyonu.Kutuphane_DataSetDataSet();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtAdres = new System.Windows.Forms.TextBox();
             this.txtTelefon = new System.Windows.Forms.TextBox();
@@ -48,32 +45,12 @@
             this.btnCikis = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.txtUyeID = new System.Windows.Forms.TextBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtAdSoyadAra = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.uyelerTableAdapter = new kütüphaneOtomasyonu.Kutuphane_DataSetDataSetTableAdapters.UyelerTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.uyelerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kutuphaneDataSetDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kutuphane_DataSetDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // uyelerBindingSource
-            // 
-            this.uyelerBindingSource.DataMember = "Uyeler";
-            this.uyelerBindingSource.DataSource = this.kutuphaneDataSetDataSetBindingSource;
-            // 
-            // kutuphaneDataSetDataSetBindingSource
-            // 
-            this.kutuphaneDataSetDataSetBindingSource.DataSource = this.kutuphane_DataSetDataSet;
-            this.kutuphaneDataSetDataSetBindingSource.Position = 0;
-            // 
-            // kutuphane_DataSetDataSet
-            // 
-            this.kutuphane_DataSetDataSet.DataSetName = "Kutuphane_DataSetDataSet";
-            this.kutuphane_DataSetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtEmail
             // 
@@ -176,7 +153,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(867, 466);
             this.panel1.TabIndex = 23;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label7
             // 
@@ -238,10 +214,6 @@
             this.txtUyeID.Size = new System.Drawing.Size(200, 24);
             this.txtUyeID.TabIndex = 16;
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // txtAdSoyadAra
             // 
             this.txtAdSoyadAra.Location = new System.Drawing.Point(178, 14);
@@ -261,18 +233,15 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Ad Soyad Ara";
             // 
-            // uyelerTableAdapter
-            // 
-            this.uyelerTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 44);
+            this.dataGridView1.Location = new System.Drawing.Point(-1, 47);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(859, 198);
             this.dataGridView1.TabIndex = 24;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
             // frmUyeListele
             // 
@@ -287,9 +256,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Üye Listeleme Sayfası";
             this.Load += new System.EventHandler(this.frmUyeListele_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.uyelerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kutuphaneDataSetDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kutuphane_DataSetDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -312,11 +278,6 @@
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.Panel panel1;
-        private Kutuphane_DataSetDataSet kutuphane_DataSetDataSet;
-        private System.Windows.Forms.BindingSource kutuphaneDataSetDataSetBindingSource;
-        private System.Windows.Forms.BindingSource uyelerBindingSource;
-        private Kutuphane_DataSetDataSetTableAdapters.UyelerTableAdapter uyelerTableAdapter;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtUyeID;
         private System.Windows.Forms.TextBox txtAdSoyadAra;

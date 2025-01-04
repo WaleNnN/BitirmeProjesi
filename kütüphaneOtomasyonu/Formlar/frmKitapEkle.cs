@@ -25,12 +25,18 @@ namespace kütüphaneOtomasyonu.Formlar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MySqlConnection connect = new MySqlConnection("Server='localhost';Database='kutuphane';Uid='root';Pwd='233789975668mM_'");
-            connect.Open();
-            MySqlCommand komut = new MySqlCommand($"insert into kitaplar values({txtKitapID.Text},'{txtKitapAdi.Text}','{txtYazar.Text}','{txtYayinevi.Text}','{txtSayfasayisi.Text}','{txtAciklama.Text}',now())", connect);
-            komut.ExecuteNonQuery();
-            connect.Close();
-            MessageBox.Show("Kitap ekleme başarılı");
+            try
+            {
+                MySqlConnection connect = new MySqlConnection("Server='localhost';Database='kutuphane';Uid='root';Pwd='233789975668mM_'");
+                connect.Open();
+                MySqlCommand komut = new MySqlCommand($"insert into kitaplar values({txtKitapID.Text},'{txtKitapAdi.Text}','{txtYazar.Text}','{txtYayinevi.Text}','{txtSayfasayisi.Text}','{txtAciklama.Text}',now())", connect);
+                komut.ExecuteNonQuery();
+                connect.Close();
+                MessageBox.Show("Kitap ekleme başarılı");
+            }
+            catch {
+                MessageBox.Show("HATA");
+            }
             
         }
     }

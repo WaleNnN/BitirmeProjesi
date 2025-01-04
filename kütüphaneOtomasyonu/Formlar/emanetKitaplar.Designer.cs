@@ -33,17 +33,17 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.uyeIDtext = new System.Windows.Forms.TextBox();
+            this.kitapIdtext = new System.Windows.Forms.TextBox();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -75,21 +75,23 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "KitapID";
             // 
-            // textBox1
+            // uyeIDtext
             // 
-            this.textBox1.Location = new System.Drawing.Point(168, 19);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 24);
-            this.textBox1.TabIndex = 3;
+            this.uyeIDtext.Location = new System.Drawing.Point(168, 19);
+            this.uyeIDtext.Multiline = true;
+            this.uyeIDtext.Name = "uyeIDtext";
+            this.uyeIDtext.Size = new System.Drawing.Size(138, 24);
+            this.uyeIDtext.TabIndex = 3;
+            this.uyeIDtext.TextChanged += new System.EventHandler(this.uyeIDtext_TextChanged);
             // 
-            // textBox4
+            // kitapIdtext
             // 
-            this.textBox4.Location = new System.Drawing.Point(168, 97);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(138, 24);
-            this.textBox4.TabIndex = 3;
+            this.kitapIdtext.Location = new System.Drawing.Point(168, 97);
+            this.kitapIdtext.Multiline = true;
+            this.kitapIdtext.Name = "kitapIdtext";
+            this.kitapIdtext.Size = new System.Drawing.Size(138, 24);
+            this.kitapIdtext.TabIndex = 3;
+            this.kitapIdtext.TextChanged += new System.EventHandler(this.kitapIdtext_TextChanged);
             // 
             // ımageList1
             // 
@@ -103,8 +105,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSalmon;
             this.panel1.Controls.Add(this.dataGridView3);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.uyeIDtext);
+            this.panel1.Controls.Add(this.kitapIdtext);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label4);
@@ -112,6 +114,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(617, 321);
             this.panel1.TabIndex = 5;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(282, 145);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(290, 150);
+            this.dataGridView3.TabIndex = 7;
+            this.dataGridView3.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellEnter);
             // 
             // button3
             // 
@@ -133,18 +145,10 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(-4, 316);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(262, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(273, 150);
             this.dataGridView2.TabIndex = 6;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(282, 145);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(290, 150);
-            this.dataGridView3.TabIndex = 7;
+      
+            this.dataGridView2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEnter);
             // 
             // emanetKitaplar
             // 
@@ -160,8 +164,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -171,8 +175,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox uyeIDtext;
+        private System.Windows.Forms.TextBox kitapIdtext;
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;

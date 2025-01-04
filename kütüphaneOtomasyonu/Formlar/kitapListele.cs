@@ -67,5 +67,14 @@ namespace kütüphaneOtomasyonu.Formlar
             connect.Close();
         }
 
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            txtKitapID.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtKitapAdi.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtYazar.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtYayinevi.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txtSayfasayisi.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            txtAciklama.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+        }
     }
 }

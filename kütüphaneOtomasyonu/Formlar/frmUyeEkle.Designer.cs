@@ -206,6 +206,7 @@
             this.Name = "frmUyeEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Üye Ekleme Sayfası";
+           
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -227,8 +228,8 @@
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtUyeID;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

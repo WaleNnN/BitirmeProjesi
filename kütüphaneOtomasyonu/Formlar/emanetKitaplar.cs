@@ -9,6 +9,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace kütüphaneOtomasyonu.Formlar
 {
@@ -24,7 +25,7 @@ namespace kütüphaneOtomasyonu.Formlar
             try
             {
                 MySqlConnection connect = new MySqlConnection("Server='localhost';Database='kutuphane';Uid='root';Pwd='233789975668mM_'");
-                MySqlCommand komut = new MySqlCommand($"insert into EmanetKitaplar values({textBox1.Text},{textBox4.Text},now())", connect);
+                MySqlCommand komut = new MySqlCommand($"insert into EmanetKitaplar values({uyeIDtext.Text},{kitapIdtext.Text},now())", connect);
                 connect.Open();
                 komut.ExecuteNonQuery();
                 connect.Close();
@@ -40,8 +41,8 @@ namespace kütüphaneOtomasyonu.Formlar
             }
             catch
             {
-                MessageBox.Show("Aynı kişiye tekrar Emanet Edilemez");
-                    }
+                MessageBox.Show("Aynı kişiye aynı kitap ödünç verilemez.");
+            }
 
         }
 
@@ -73,11 +74,37 @@ namespace kütüphaneOtomasyonu.Formlar
             connect.Close();
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+
+        private void dataGridView2_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-           
+            if (e.RowIndex >= 0) // Geçerli bir satır tıklandıysa
+            {
+                DataGridViewRow selectedRow = dataGridView2.Rows[e.RowIndex];
+                uyeIDtext.Text = selectedRow.Cells["UyeID"].Value.ToString();
+            }
         }
 
-       
+        private void dataGridView3_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Geçerli bir satır tıklandıysa
+            {
+                DataGridViewRow selectedRow = dataGridView3.Rows[e.RowIndex];
+                kitapIdtext.Text = selectedRow.Cells["KitapID"].Value.ToString();
+            }
+        }
+
+        private void uyeIDtext_TextChanged(object sender, EventArgs e)
+        {
+            uyeIDtext.Enabled = false;
+        }
+
+        private void kitapIdtext_TextChanged(object sender, EventArgs e)
+        {
+            kitapIdtext.Enabled = false;
+        }
+
+
     }
 }
+
