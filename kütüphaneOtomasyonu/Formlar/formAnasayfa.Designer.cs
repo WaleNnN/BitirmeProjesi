@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAnasayfa));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -43,6 +44,7 @@
             this.btnKitapEkle = new System.Windows.Forms.Button();
             this.btnUyeListele = new System.Windows.Forms.Button();
             this.btnUyeEkle = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -51,11 +53,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Coral;
+            this.panel1.BackColor = System.Drawing.Color.Peru;
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.pictureBox6);
@@ -72,7 +75,7 @@
             this.panel1.Controls.Add(this.btnUyeEkle);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(175, 457);
+            this.panel1.Size = new System.Drawing.Size(175, 451);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox8
@@ -147,19 +150,24 @@
             // 
             // cikis
             // 
+            this.cikis.BackColor = System.Drawing.Color.Transparent;
+            this.cikis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cikis.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cikis.ForeColor = System.Drawing.Color.White;
             this.cikis.Location = new System.Drawing.Point(3, 390);
             this.cikis.Name = "cikis";
             this.cikis.Size = new System.Drawing.Size(166, 57);
             this.cikis.TabIndex = 0;
             this.cikis.Text = "Çıkış";
             this.cikis.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cikis.UseVisualStyleBackColor = true;
+            this.cikis.UseVisualStyleBackColor = false;
             this.cikis.Click += new System.EventHandler(this.cikis_Click);
             // 
             // btnİadeKitaplar
             // 
+            this.btnİadeKitaplar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnİadeKitaplar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnİadeKitaplar.ForeColor = System.Drawing.Color.White;
             this.btnİadeKitaplar.Location = new System.Drawing.Point(3, 327);
             this.btnİadeKitaplar.Name = "btnİadeKitaplar";
             this.btnİadeKitaplar.Size = new System.Drawing.Size(166, 57);
@@ -171,7 +179,9 @@
             // 
             // btnEmanetKitaplar
             // 
+            this.btnEmanetKitaplar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEmanetKitaplar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEmanetKitaplar.ForeColor = System.Drawing.Color.White;
             this.btnEmanetKitaplar.Location = new System.Drawing.Point(3, 264);
             this.btnEmanetKitaplar.Name = "btnEmanetKitaplar";
             this.btnEmanetKitaplar.Size = new System.Drawing.Size(166, 57);
@@ -183,7 +193,10 @@
             // 
             // btnKitapListele
             // 
+            this.btnKitapListele.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnKitapListele.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnKitapListele.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKitapListele.ForeColor = System.Drawing.Color.White;
             this.btnKitapListele.Location = new System.Drawing.Point(3, 201);
             this.btnKitapListele.Name = "btnKitapListele";
             this.btnKitapListele.Size = new System.Drawing.Size(166, 57);
@@ -195,7 +208,9 @@
             // 
             // btnKitapEkle
             // 
+            this.btnKitapEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnKitapEkle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKitapEkle.ForeColor = System.Drawing.Color.White;
             this.btnKitapEkle.Location = new System.Drawing.Point(3, 138);
             this.btnKitapEkle.Name = "btnKitapEkle";
             this.btnKitapEkle.Size = new System.Drawing.Size(166, 57);
@@ -207,7 +222,9 @@
             // 
             // btnUyeListele
             // 
+            this.btnUyeListele.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUyeListele.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUyeListele.ForeColor = System.Drawing.Color.White;
             this.btnUyeListele.Location = new System.Drawing.Point(3, 75);
             this.btnUyeListele.Name = "btnUyeListele";
             this.btnUyeListele.Size = new System.Drawing.Size(166, 57);
@@ -219,23 +236,38 @@
             // 
             // btnUyeEkle
             // 
+            this.btnUyeEkle.BackColor = System.Drawing.Color.Transparent;
+            this.btnUyeEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUyeEkle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUyeEkle.ForeColor = System.Drawing.Color.White;
             this.btnUyeEkle.Location = new System.Drawing.Point(3, 12);
             this.btnUyeEkle.Name = "btnUyeEkle";
             this.btnUyeEkle.Size = new System.Drawing.Size(166, 57);
             this.btnUyeEkle.TabIndex = 0;
             this.btnUyeEkle.Text = "Üye Ekle";
             this.btnUyeEkle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUyeEkle.UseVisualStyleBackColor = true;
+            this.btnUyeEkle.UseVisualStyleBackColor = false;
             this.btnUyeEkle.Click += new System.EventHandler(this.btnUyeEkle_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Peru;
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(619, 453);
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
             // 
             // formAnasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chocolate;
-            this.ClientSize = new System.Drawing.Size(619, 448);
+            this.ClientSize = new System.Drawing.Size(619, 453);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox3);
             this.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formAnasayfa";
@@ -248,6 +280,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +302,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

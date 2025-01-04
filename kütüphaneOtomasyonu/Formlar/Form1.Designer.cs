@@ -47,7 +47,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -59,11 +60,11 @@
             this.button1.BackColor = System.Drawing.Color.Coral;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(537, 287);
+            this.button1.Location = new System.Drawing.Point(433, 283);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 34);
             this.button1.TabIndex = 19;
-            this.button1.Text = "Giriş";
+            this.button1.Text = "Admin Girişi";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -245,11 +246,39 @@
             this.textBox2.Size = new System.Drawing.Size(133, 27);
             this.textBox2.TabIndex = 21;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Coral;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button4.ForeColor = System.Drawing.Color.Snow;
+            this.button4.Location = new System.Drawing.Point(546, 283);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(111, 34);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Kayıt Ol";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Coral;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Location = new System.Drawing.Point(663, 283);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(110, 34);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "Kullanıcı Girişi";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 450);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -292,7 +321,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 
