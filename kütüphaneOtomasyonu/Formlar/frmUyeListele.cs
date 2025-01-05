@@ -100,6 +100,15 @@ namespace kütüphaneOtomasyonu.Formlar
                 txtAdres.Text = selectedRow.Cells["Adres"].Value.ToString();
             }
         }
+
+        private void txtUyeID_Click(object sender, EventArgs e)
+        {
+            txtUyeID.Text = "";
+            txtAdiSoyadi.Text = "";
+            txtTelefon.Text = "";
+            txtAdres.Text = "";
+            txtEmail.Text = "";
+        }
     }
     }
 

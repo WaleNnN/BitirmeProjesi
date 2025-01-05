@@ -16,5 +16,25 @@ namespace kütüphaneOtomasyonu.Formlar
         {
             InitializeComponent();
         }
+
+        private void txtadisoyadi_TextChanged(object sender, EventArgs e)
+        {
+            txtadisoyadi.Enabled= false;
+        }
+
+        private void txttel_TextChanged(object sender, EventArgs e)
+        {
+            txttel.Enabled= false;
+        }
+
+        private void txtadres_TextChanged(object sender, EventArgs e)
+        {
+            txtadres.Enabled= false;
+        }
+
+        private void txtemail_TextChanged(object sender, EventArgs e)
+        {
+            txtemail.Enabled= false;
+        }
     }
 }

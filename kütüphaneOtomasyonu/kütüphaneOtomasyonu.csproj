@@ -263,5 +263,59 @@
   <ItemGroup>
     <None Include="Resources\1564506_close_exit_logout_power_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Call2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Address.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Name1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emergency Exit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

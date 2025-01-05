@@ -76,5 +76,14 @@ namespace kütüphaneOtomasyonu.Formlar
             txtSayfasayisi.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             txtAciklama.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            MySqlConnection connect = new MySqlConnection("Server='localhost';Database='kutuphane';Uid='root';Pwd='233789975668mM_'");
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter("Select * from kitaplar where KitapAdi like '%" + txtkitapara.Text + "%'", connect);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
     }
 }
